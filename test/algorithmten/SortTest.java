@@ -14,11 +14,13 @@ public class SortTest {
     private  static final int length=3000000;
     private  static final int max=100000;
     int[] arr;
+    int[] bucketArr;
 
     @Before
     public void before(){
         res=new int[3000000];
         arr = NumberUtils.getRandomArs(length, max);
+        bucketArr = NumberUtils.getRandomBetween(length, 1000, 9999);
         before=System.currentTimeMillis();
     }
 
@@ -33,14 +35,14 @@ public class SortTest {
             }
         }
         System.out.println("正确");
-        /*for (int i=0;i<50;i++){
+        for (int i=0;i<50;i++){
             System.out.print(res[i]+" ");
         }
         System.out.println();
         for (int i=2999950;i<3000000;i++){
             System.out.print(res[i]+" ");
         }
-        System.out.println();*/
+        System.out.println();
     }
 
     @Test
@@ -121,5 +123,13 @@ public class SortTest {
         //原计数排序
         System.out.print("原计数排序:");
         res = countingSort.countingSort(arr,max);
+    }
+
+    @Test
+    public void bucketSort() {
+        BucketSort bucketSort=new BucketSort();
+        //原桶排序
+        System.out.print("原桶排序:");
+        res = bucketSort.bucketSort(bucketArr);
     }
 }

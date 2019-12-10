@@ -14,6 +14,18 @@ public class NumberUtils {
         }
         return rs ;
     }
+
+    /**
+     * 获取特定范围随机int类型数组
+     */
+    public static int[] getRandomBetween(int length,int min,int max){
+        int rs[]=new int[length];
+        Random random=new Random();
+        for(int i=0;i<length;i++){
+            rs[i]=random.nextInt(max)%(max-min+1)+min;
+        }
+        return rs;
+    }
     /**
      * 打印内容
      */
