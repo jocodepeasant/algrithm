@@ -28,21 +28,21 @@ public class SortTest {
     public void after(){
         System.out.println(System.currentTimeMillis()-before);
 
-        for (int i=0;i<length-1;i++){
+        for (int i=0;i<500-1;i++){
             if (res[i]>res[i+1]){
                 System.out.println("错误");
                 return;
             }
         }
         System.out.println("正确");
-        for (int i=0;i<50;i++){
-            System.out.print(res[i]+" ");
+/*        for (int i=0;i<50;i++){
+            System.out.print(bucketArr[i]+" ");
         }
         System.out.println();
         for (int i=2999950;i<3000000;i++){
-            System.out.print(res[i]+" ");
+            System.out.print(bucketArr[i]+" ");
         }
-        System.out.println();
+        System.out.println();*/
     }
 
     @Test
@@ -131,5 +131,13 @@ public class SortTest {
         //原桶排序
         System.out.print("原桶排序:");
         res = bucketSort.bucketSort(bucketArr);
+    }
+
+    @Test
+    public void radixSort() {
+        RadixSort radixSort=new RadixSort();
+        //原桶排序
+        System.out.print("原桶排序:");
+        radixSort.sort(bucketArr);
     }
 }
