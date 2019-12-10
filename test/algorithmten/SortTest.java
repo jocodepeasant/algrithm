@@ -12,7 +12,7 @@ public class SortTest {
     private Long before;
     private int[] res;
     private  static final int length=3000000;
-    private  static final int max=100000000;
+    private  static final int max=100000;
     int[] arr;
 
     @Before
@@ -33,11 +33,11 @@ public class SortTest {
             }
         }
         System.out.println("正确");
-       /* for (int i=0;i<50;i++){
+        /*for (int i=0;i<50;i++){
             System.out.print(res[i]+" ");
         }
         System.out.println();
-        for (int i=2950;i<3000;i++){
+        for (int i=2999950;i<3000000;i++){
             System.out.print(res[i]+" ");
         }
         System.out.println();*/
@@ -113,5 +113,13 @@ public class SortTest {
         //原堆排序
         System.out.print("原堆排序:");
         res = heapSort.heapSort(arr);
+    }
+
+    @Test
+    public void countingSort() {
+        CountingSort countingSort=new CountingSort();
+        //原计数排序
+        System.out.print("原计数排序:");
+        res = countingSort.countingSort(arr,max);
     }
 }
