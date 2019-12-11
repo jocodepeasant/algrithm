@@ -5,6 +5,9 @@ import org.junit.Before;
 import org.junit.Test;
 import uilts.NumberUtils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class SortTest {
@@ -136,8 +139,8 @@ public class SortTest {
     @Test
     public void radixSort() {
         RadixSort radixSort=new RadixSort();
-        //原桶排序
-        System.out.print("原桶排序:");
+        //原基数排序
+        System.out.print("原基数排序:");
         radixSort.sort(bucketArr);
     }
 }

@@ -17,3 +17,11 @@ S
 #src/algorithmten/InsertionSort.java,3\d\3dceb08ece3c769ea69afd5e704d2858bf3cca5b
 O
 test/algorithmten/SortTest.java,2\4\24fb0c31451ce6c38c12e9f28ea9ba31f76c2f89
+O
+src/algorithmten/RadixSort.java,1\1\11eb85799a83926ffae32a5221d40b523d1e7fd5
+P
+ src/algorithmten/BucketSort.java,1\d\1d5cc69447d5b0cf4242975189c0ce0f16a11289
+R
+"src/algorithmten/CountingSort.java,a\2\a25d6856992dc2c8c58422a50f7cc16714581798
+N
+src/algorithmten/HeapSort.java,9\7\9703fb1e9d088eae8d03b12948631a57639def07
